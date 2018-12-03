@@ -1,0 +1,50 @@
+<table border="1">
+
+        <tr>
+            <th>Recipient</th>
+            <th>Recipient_img</th>
+            <th>Sender</th>
+            <th>Sender_img</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Important</th>
+        </tr>
+    
+       <tr>
+       <td> {{message.recipient}} </td>
+       <td> {{message.recipient_img}} </td>
+       <td>  {{message.sender}} </td>
+       <td> {{message.sender_img}} </td>
+       <td> {{message.title}} </td>
+       <td> {{message.description}} </td>
+       <td> {{message.created_at}} </td>
+       <td> {{message.important}} </td>
+    </tr>
+    </table>
+    
+    </div>
+    <br>
+    
+    <button value="Reply"  ng-click="Reply()"> Reply</button>
+    <button value="delete"  ng-click="delete()"> Delete</button>
+    <button value="important" ng-click="important()"> Important</button>
+    <button value="back" ng-click="back()"> Back</button>
+    <br><br>
+    <h3>REPLIES</h3>
+    <table>
+        <tr>
+            <th>Recipient</th>
+            <th>Sender</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
+        <tr ng-repeat="x in replies">
+            <td>{{x.recipient}}</td>
+            <td>{{x.sender}}</td>
+            <td>{{x.title}}</td>
+            <td>{{x.description}}</td>
+            <td>{{x.created_at}}</td>
+        </tr>
+    </table>
